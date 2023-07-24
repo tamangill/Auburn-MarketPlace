@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AuburnMarketPlace.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AuburnMarketPlace.Controllers
 {
@@ -82,13 +83,10 @@ namespace AuburnMarketPlace.Controllers
 
         // POST: api/User
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        
         [HttpPost]
         public async Task<ActionResult<User>> PostUser(User user)
         {
-          if (_context.User == null)
-          {
-              return Problem("Entity set 'MyDbContext.User'  is null.");
-          }
             _context.User.Add(user);
             await _context.SaveChangesAsync();
 

@@ -11,4 +11,7 @@ public class MyDbContext : DbContext
     public MyDbContext(DbContextOptions<MyDbContext> options) : base(options) { }
     public DbSet<User> User { get; set; }
     public DbSet<Product> Product { get; set; }
+    public DbSet<Cart> Cart { get; set; } = default!;
+    public DbSet<CartItem> CartItem { get; set; } = default!;
+    public DbSet<AuburnMarketPlace.Models.Order> Order { get; set; } = default!;
 }

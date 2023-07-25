@@ -33,7 +33,6 @@ public class Shoppingcartactions {
       
       cart.cartItems.Add(newItem);
 
-
       try {
         _dbContext.SaveChanges();
         return true;
@@ -60,6 +59,4 @@ public class Shoppingcartactions {
     }
     return false;
   }
-
-
 }

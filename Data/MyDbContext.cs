@@ -14,4 +14,5 @@ public class MyDbContext : DbContext
     public DbSet<Cart> Cart { get; set; } = default!;
     public DbSet<CartItem> CartItem { get; set; } = default!;
     public DbSet<AuburnMarketPlace.Models.Order> Order { get; set; } = default!;
+     public DbSet<OrderDetail> OrderDetails { get; set; }
 }

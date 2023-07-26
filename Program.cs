@@ -50,6 +50,13 @@ app.UseAuthentication();
 app.UseIdentityServer();
 app.UseAuthorization();
 
+// Add CORS support
+app.UseCors(builder => builder
+    .WithOrigins("https://localhost:44403") // Replace with the actual frontend URL
+    .AllowAnyHeader()
+    .AllowAnyMethod()
+    .AllowCredentials());
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller}/{action=Index}/{id?}");

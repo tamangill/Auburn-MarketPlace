@@ -1,0 +1,16 @@
+/* home.css */
+.card-hover-shadow:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.btn-buy {
+  background-color: blue;
+  color: white;
+}
+
+.btn-buy:hover {
+  background-color: green;
+  color: white;
+}

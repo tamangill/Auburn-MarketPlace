@@ -6,4 +6,6 @@ public class Product {
   public int quantity { get; set; }
   public string category { get; set; }
 
+  public string imageUrl {get; set; }
+
 }
